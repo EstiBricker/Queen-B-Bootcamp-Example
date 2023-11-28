@@ -1,26 +1,22 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import firstPerson from "./images/person1.svg";
+import React from "react";
+//import axios from "axios";
+
+//import Header from "../src/components/Header";
+import Main from "../src/components/Main";
+//import Footer from "../src/components/Footer";
+
 const port = process.env.PORT || 5001;
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    axios
-      .get(`http://localhost:${port}/api/teachers`)
-      .then((response) => setMessage(response.data.message))
-      .catch((error) =>
-        console.error(`There was an error retrieving the message: ${error}`)
-      );
-  }, []);
-
   return (
-    <div className="App">
-      <h1>{message}</h1>
-      <img src={firstPerson} alt="person1" />
+    <div className="container">
+      <h1>HEYYYYYYYYYYYYYYYYYY</h1>
+      {/*<Header /> */}
+      <Main port={port} />
+      {/* <Footer /> */}
     </div>
   );
 }
 
 export default App;
+//create component App
