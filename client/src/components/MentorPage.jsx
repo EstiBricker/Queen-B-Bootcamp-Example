@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Link, useLocation} from "react-router-dom";
-import {type} from "@testing-library/user-event/dist/type";
-import {Button} from "react-bootstrap";
+// import {type} from "@testing-library/user-event/dist/type";
+// import {Button} from "react-bootstrap";
 
 
 
