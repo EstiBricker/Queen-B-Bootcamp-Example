@@ -91,7 +91,29 @@ body {
   font-weight: 500;
   color: #ca8a8b;
 }
+.main h3 {
+  display: inline-block;
+  padding: 1rem 0;
+  /*border-top: 2px solid currentColor;*/
+  /*border-bottom: 2px solid currentColor;*/
+  font-size: 2rem;
+  /*text-transform: uppercase;*/
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: #ca8a8b;
+}
 
+.header h2 {
+  display: inline-block;
+  padding: 1rem 0;
+  /*border-top: 2px solid currentColor;*/
+  /*border-bottom: 2px solid currentColor;*/
+  font-size: 2rem;
+  /*text-transform: uppercase;*/
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: #ee3535;
+}
 .card > p {
   font-size: 1.5rem;
   text-align: center;
@@ -101,15 +123,18 @@ body {
 
 .teachers {
   list-style: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: table-column;
+  /*grid-template-columns: 1fr 1fr;*/
   gap: 4.8rem;
+  /*margin: 1rem;*/
   color: #85603f;
 }
 
 .teacher {
+  width: 78vw;
   display: flex;
   gap: 3.2rem;
+  margin: 1rem;
   border: 1px solid rgb(255, 0, 195);
 
   background-color: #f9ceee;

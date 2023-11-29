@@ -1,0 +1,74 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+}
+
+.card {
+  width: 300px;
+  background-color: #ffe6f2;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+}
+
+.profile-img {
+  width: 80px; /* Reduced size */
+  height: 80px; /* Reduced size */
+  border-radius: 10px; /* Square border */
+  object-fit: cover;
+  border: 3px solid #3385ff; /* Blue border */
+  margin-bottom: 10px;
+}
+
+.name {
+  color: #ff66b2;
+  margin: 0;
+}
+
+.profession {
+  color: #ff99cc;
+  margin: 5px 0;
+}
+
+.location {
+  margin: 0;
+}
+
+.facts {
+  margin-top: 15px;
+}
+
+.fact {
+  margin-bottom: 8px;
+  color: #ff3399;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contactButton {
+  background-color: #ff0066;
+  color: #fff;
+  border: none;
+  padding: 4px 8px; /* Smaller size */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contactButton:hover {
+  background-color: #ff3385;
+}

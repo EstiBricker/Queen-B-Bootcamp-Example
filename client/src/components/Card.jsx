@@ -1,18 +1,19 @@
 import React from "react";
+import {Image} from "react-bootstrap";
 
 export default function Card({ teacherObj }) {
   return (
     //add border to the card
-    <li className={`teacher ${teacherObj.soldOut ? "unavalible" : ""}`}>
-      <img src={teacherObj.photoName} alt={teacherObj.name} />
+    <div className={`teacher ${teacherObj.soldOut ? "unavalible" : ""}`}>
+      <Image src={teacherObj.img} alt={teacherObj.img} rounded={true} height={'100rem'} width={'100rem'} style={{background: "#f8edeb", padding: "0.5rem"}} />
       <div>
         <h3>{teacherObj.name}</h3>
-        <h4>{teacherObj.ingredients}</h4>
-        <p>📍{teacherObj.location}</p>
+        <h4>{teacherObj.profession}</h4>
+        <p>📍{teacherObj.city}</p>
         <span>
           {teacherObj.soldOut ? "Currently Unavailable" : teacherObj.price}
         </span>
       </div>
-    </li>
+    </div>
   );
 }

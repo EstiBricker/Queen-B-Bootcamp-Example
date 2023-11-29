@@ -2,6 +2,7 @@ import React from "react";
 // import teachersData from "../teachers.js";
 import Card from "./Card.jsx";
 import {Link} from "react-router-dom";
+import Col from "react-bootstrap/Col";
 
 export default function Main({teachersList}) {
   // const teachers = teachersData;
@@ -13,16 +14,19 @@ export default function Main({teachersList}) {
 
       {numTeachers > 0 ? (
         <>
-          <p>
+          <h3>
             view our amazing teachers, each with their own unique style, for
             more details click on the teacher.
-          </p>
+          </h3>
 
           <ul className="teachers">
             {teachersList.map((teacher) => (
-                <Link to="../teachers" state={{from: teacher.id}}>
-                  <Card teacherObj={teacher} key={teacher.id} />
-                </Link>
+                <Col xs={6} md={4} style={{display: "flex", flexDirection: "column", alignItems: "center", flexWrap: "wrap"}}>
+                    <Link to="../teachers" state={{from: teacher.id}}>
+                        <Card teacherObj={teacher} key={teacher.id} />
+                    </Link>
+                </Col>
+
             ))}
           </ul>
         </>

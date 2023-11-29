@@ -5,7 +5,7 @@ export default function Header() {
   //const style = {};
   var hour = new Date().getHours();
   var massage = "";
-  var name = "Esti Bricker";
+  // var name = "Esti Bricker";
 
   //add name later by log in
   if (hour < 12 && hour > 4) {
@@ -15,7 +15,7 @@ export default function Header() {
   } else {
     massage = "Good Evening Dear";
   }
-  massage = massage + " " + name;
+  massage = massage + " " + 'Queen';
 
   return (
     <header className="header">
