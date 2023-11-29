@@ -34,11 +34,14 @@ body {
 }
 
 .profession {
+  font-size: 3rem;
   color: #ff99cc;
   margin: 5px 0;
 }
 
 .location {
+  color: #ff99cc;
+  font-size: 2.5rem;
   margin: 0;
 }
 
@@ -61,8 +64,8 @@ body {
   background-color: #ff0066;
   color: #fff;
   border: none;
-  padding: 4px 8px; /* Smaller size */
-  border-radius: 5px;
+  padding: 15px 15px; /* Smaller size */
+  border-radius: 15px;
   cursor: pointer;
   transition: background-color 0.3s;
   text-decoration: none;
@@ -71,4 +74,8 @@ body {
 
 .contactButton:hover {
   background-color: #ff3385;
+}
+
+li{
+  font-size: 2.5rem;
 }

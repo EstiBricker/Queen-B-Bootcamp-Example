@@ -6,6 +6,9 @@ import './MentorPage.cc.css'
 import {type} from "@testing-library/user-event/dist/type";
 import {Button} from "react-bootstrap";
 import Person from "../mentorPersonalPage/Person";
+import PersonalHeader from "../mentorPersonalPage/PersonalHeder";
+import Contacts from "../mentorPersonalPage/Contacts";
+import DetailsList from "../mentorPersonalPage/DitailsList";
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 
@@ -139,14 +142,17 @@ export default function MentorPage({port}) {
     }, [from, port]);
 
     return(
-        <div>
+        <div >
             {(from == null) ? (<h1>the mentor is not exist</h1> ):
                 (<div>
                     {/*<h1>this is the mentor page!</h1>*/}
                     {/*<h4>mentor data: {JSON.stringify(mentorData)}</h4>*/}
                     {/*<h4>mentor data type: {typeof (mentorData)}</h4>*/}
                     {/*<h4>mentor id: {id}</h4>*/}
-                    <Person/>
+                    <PersonalHeader />
+                    {/*<Person teacherData={mentorData}/>*/}
+                    <DetailsList/>
+                    <Contacts/>
                     {/*<MentorProfile mentorData={mentorData}/>*/}
                 </div>)
             }
