@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PersonalHeader() {
+export default function PersonalHeader({name}) {
     const style = { color: "red", fontSize: "48px", textTransform: "uppercase" };
     //const style = {};
     // var hour = new Date().getHours();
@@ -24,7 +24,7 @@ export default function PersonalHeader() {
                 alt="Teacher Pic"
                 className="profile-img"
             />
-            <h1 style={style}>Teacher Name</h1>
+            <h1 style={style}>{name}</h1>
 
             {/*<h2>{massage}</h2>*/}
         </header>

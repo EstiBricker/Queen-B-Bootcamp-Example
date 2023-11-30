@@ -141,6 +141,7 @@ export default function MentorPage({port}) {
             });
     }, [from, port]);
 
+
     return(
         <div >
             {(from == null) ? (<h1>the mentor is not exist</h1> ):
@@ -149,9 +150,9 @@ export default function MentorPage({port}) {
                     {/*<h4>mentor data: {JSON.stringify(mentorData)}</h4>*/}
                     {/*<h4>mentor data type: {typeof (mentorData)}</h4>*/}
                     {/*<h4>mentor id: {id}</h4>*/}
-                    <PersonalHeader />
+                    <PersonalHeader name={mentorData.name} />
                     {/*<Person teacherData={mentorData}/>*/}
-                    <DetailsList/>
+                    <DetailsList data={mentorData}/>
                     <Contacts/>
                     {/*<MentorProfile mentorData={mentorData}/>*/}
                 </div>)

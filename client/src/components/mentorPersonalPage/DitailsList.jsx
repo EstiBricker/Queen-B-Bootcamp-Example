@@ -1,21 +1,22 @@
 import React from "react";
 
-export default function DetailsList(){
+export default function DetailsList({data}){
 
     return(
         <div>
             <div >
 
-                <h2 className="profession">Profession</h2>
-                <h3 className="location">📍Location</h3>
+                <h2 className="profession">{data.profession}</h2>
+                <h3 className="location">📍{data.city}</h3>
 
             </div>
             <div className="facts">
-                <ul>
-                    <li className="fact">hobby 1</li>
-                    <li className="fact">hobby 2</li>
-                    <li className="fact">hobby 3</li>
-                </ul>
+                <h2 className="fact">{data.hobbies}</h2>
+                {/*<ul>*/}
+                {/*    <li className="fact">{data.hobbies}</li>*/}
+                {/*    /!*<li className="fact">hobby 2</li>*!/*/}
+                {/*    /!*<li className="fact">hobby 3</li>*!/*/}
+                {/*</ul>*/}
             </div>
         </div>
 
