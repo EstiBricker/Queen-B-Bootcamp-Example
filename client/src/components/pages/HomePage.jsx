@@ -9,7 +9,6 @@ import {Link} from "react-router-dom";
 
 export default function HomePage({port}) {
     const [mentors, setMentors] = useState([]);
-    console.log(port);
     useEffect(() => {
         fetch(`http://localhost:${port}/teachers`)
             .then(response => {
@@ -26,12 +25,9 @@ export default function HomePage({port}) {
     return(
         <div>
             <Header />
-            <SearchBar teachers={mentors}/>
-            <Main teachersList={mentors}/>
+            <Main teachersList={mentors}/> 
+            <SearchBar mentors={mentors}/>
             <Footer/>
-            {/*<MentorCard mentorsList={mentors}/>*/}
-
-        {/*    add your components here :) */}
         </div>
     )
 }

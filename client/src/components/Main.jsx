@@ -3,6 +3,8 @@ import React from "react";
 import Card from "./Card.jsx";
 import {Link} from "react-router-dom";
 
+import SearchBar from "./SearchBar";
+
 export default function Main({teachersList}) {
   // const teachers = teachersData;
   const numTeachers = teachersList.length;
@@ -17,14 +19,6 @@ export default function Main({teachersList}) {
             view our amazing teachers, each with their own unique style, for
             more details click on the teacher.
           </p>
-
-          <ul className="teachers">
-            {teachersList.map((teacher) => (
-                <Link to="../teachers" state={{from: teacher.id}}>
-                  <Card teacherObj={teacher} key={teacher.id} />
-                </Link>
-            ))}
-          </ul>
         </>
       ) : (
         <p>We're still recruiting. Please come back later :)</p>
