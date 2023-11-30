@@ -19,21 +19,31 @@ export default function SearchBar({mentors}) {
 
             <Row style={{flexWrap: "wrap"}}>
                 {mentors.filter((value)=>{
-                    if(SearchTerm === ""){
-                        return value
-                    }else { if(value.name.toLowerCase().includes(SearchTerm.toLocaleLowerCase())){
-                                return value
-                            }
-                        else { if(value.location.toLowerCase().includes(SearchTerm.toLocaleLowerCase())){
-                                    return value   
-                                }{/*
+                    // console.log(typeof )
+                    // console.log( SearchTerm)
+
+                    // if (typeof value !== 'string'){
+                    //     return false
+                    // }
+                        if(SearchTerm === ""){
+                            return value;
+                        } else {
+                            if(value.name.toLowerCase().includes(SearchTerm.toLocaleLowerCase())){
+                                return value;
+                            } else {
+                                console.log(value)
+                                if(value.city.toLowerCase().includes(SearchTerm.toLocaleLowerCase())){
+                                    return value;
+                                 }/*
                                 else if(value.ingredients.toLowerCase().includes(SearchTerm.toLocaleLowerCase())){
-                                    return value   
-                                }*/}
+                                    return value
+                                }*/
                             }
-                    }
+                        }
+                    // }
+
                 }).map(mentor =>
-                    <Container style={{border: 3, borderColor: "black", background: "#FFE5D9", width: "28%", borderRadius: 10, padding: "0.5rem", margin: "0.5rem", display: "flex", justifyContent: "center"}}>
+                    <Container>
                          <Link to="../teachers" state={{from: mentor.id}}>
                             <Card teacherObj={mentor} key={mentor.id} />
                          </Link>
