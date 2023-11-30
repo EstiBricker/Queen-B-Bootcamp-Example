@@ -144,13 +144,13 @@ export default function MentorPage({port}) {
 
     return(
         <div >
-            {(from == null) ? (<h1>the mentor is not exist</h1> ):
+            {(mentorData == null) ? (<h1>the mentor is not exist</h1> ):
                 (<div>
                     {/*<h1>this is the mentor page!</h1>*/}
                     {/*<h4>mentor data: {JSON.stringify(mentorData)}</h4>*/}
                     {/*<h4>mentor data type: {typeof (mentorData)}</h4>*/}
                     {/*<h4>mentor id: {id}</h4>*/}
-                    <PersonalHeader name={mentorData.name} />
+                    <PersonalHeader name={mentorData?.name} />
                     {/*<Person teacherData={mentorData}/>*/}
                     <DetailsList data={mentorData}/>
                     <Contacts/>
