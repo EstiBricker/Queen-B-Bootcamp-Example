@@ -153,7 +153,7 @@ export default function MentorPage({port}) {
                     <PersonalHeader name={mentorData.name} />
                     {/*<Person teacherData={mentorData}/>*/}
                     <DetailsList data={mentorData}/>
-                    <Contacts/>
+                    <Contacts data={mentorData}/>
                     {/*<MentorProfile mentorData={mentorData}/>*/}
                 </div>)
             }
