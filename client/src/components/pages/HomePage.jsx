@@ -10,7 +10,6 @@ import {Button} from "react-bootstrap";
 
 export default function HomePage({port}) {
     const [mentors, setMentors] = useState([]);
-    console.log(port);
     useEffect(() => {
         fetch(`http://localhost:${port}/teachers`)
             .then(response => {
@@ -26,14 +25,10 @@ export default function HomePage({port}) {
 
     return(
         <div>
-            {/*<Button onClick={MentorsMaker} >create mentorslist</Button>*/}
-            <Header/>
-            <SearchBar teachers={mentors}/>
+            <Header />
             <Main teachersList={mentors}/>
+            <SearchBar mentors={mentors}/>
             <Footer/>
-            {/*<MentorCard mentorsList={mentors}/>*/}
-
-        {/*    add your components here :) */}
         </div>
     )
 }
