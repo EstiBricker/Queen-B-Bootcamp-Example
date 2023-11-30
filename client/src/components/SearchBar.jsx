@@ -12,6 +12,7 @@ export default function SearchBar({mentors}) {
     return (
         <Container>
                  <input
+                        style={{height: "5rem", width: "35rem", fontSize: "3rem"}}
                         type="text"
                         placeholder="Search.."
                         onChange={(event)=>{ SetSearchTerm(event.target.value); }}

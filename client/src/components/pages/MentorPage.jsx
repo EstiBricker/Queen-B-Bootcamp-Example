@@ -152,21 +152,24 @@ export default function MentorPage({ port }) {
       });
   }, [from, port]);
 
-  return (
-    <div>
-      {from == null ? (
-        <h1>the mentor is not exist</h1>
-      ) : (
-        <div>
-          {/*<h1>this is the mentor page!</h1>*/}
-          {/*<h4>mentor data: {JSON.stringify(mentorData)}</h4>*/}
-          {/*<h4>mentor data type: {typeof (mentorData)}</h4>*/}
-          {/*<h4>mentor id: {id}</h4>*/}
-          <PersonalHeader name={mentorData.name} />
-          {/*<Person teacherData={mentorData}/>*/}
-          <DetailsList data={mentorData} />
-          <Contacts />
-          {/*<MentorProfile mentorData={mentorData}/>*/}
+
+    return(
+        <div >
+            {(from == null) ? (<h1>the mentor is not exist</h1> ):
+                (<div>
+                    {/*<h1>this is the mentor page!</h1>*/}
+                    {/*<h4>mentor data: {JSON.stringify(mentorData)}</h4>*/}
+                    {/*<h4>mentor data type: {typeof (mentorData)}</h4>*/}
+                    {/*<h4>mentor id: {id}</h4>*/}
+                    <PersonalHeader name={mentorData.name} />
+                    {/*<Person teacherData={mentorData}/>*/}
+                    <DetailsList data={mentorData}/>
+                    <Contacts data={mentorData}/>
+                    {/*<MentorProfile mentorData={mentorData}/>*/}
+                </div>)
+            }
+            <Link style={{fontSize: '2rem'}} to="/">To Home Page</Link>
+            {/*    add your components here :) */}
         </div>
       )}
       <Link style={{ fontSize: "2rem" }} to="/">
