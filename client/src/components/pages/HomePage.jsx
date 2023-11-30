@@ -4,6 +4,7 @@ import Main from "../Main";
 import Header from "../Header";
 import Footer from "../Footer";
 import SearchBar from "../SearchBar";
+import person1 from "../../images/person1.svg";
 import {Link} from "react-router-dom";
 import {Button} from "react-bootstrap";
 // import MentorsMaker from "../../MentorsMaker";

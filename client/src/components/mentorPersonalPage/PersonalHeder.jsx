@@ -1,6 +1,15 @@
 import React from "react";
+// import person1 from "../../images/person1.svg";
+// // import person2 from "../images/person2.svg";
+// // import person3 from "../images/person3.svg";
+// // import person4 from "../images/person4.svg";
+// // import person5 from "../images/person5.svg";
+// // import person6 from "../images/person6.svg";
+// import person7 from "../../images/person7.svg";
 
-export default function PersonalHeader({name}) {
+export default function PersonalHeader({name, img}) {
+
+    // const avatars = [person1, person7];
     const style = { color: "red", fontSize: "48px", textTransform: "uppercase" };
     //const style = {};
     // var hour = new Date().getHours();
@@ -20,7 +29,7 @@ export default function PersonalHeader({name}) {
     return (
         <header className="header">
             <img
-                src="../public/logo.png" // Assuming your logo is in the public directory
+                src={img} // Assuming your logo is in the public directory
                 alt="Teacher Pic"
                 className="profile-img"
             />
